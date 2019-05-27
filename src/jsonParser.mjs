@@ -16,17 +16,12 @@ const parseType = (key, json) => {
         output.value = null;
     } else if(isArray(output.value)) {
         if(output.value.length > 0) {
-            // @TODO(sjv): Need to generate a name for the value
-            // @NOTE(sjv): This should be something along the lines of:
-            //             root_prop1_prop2__array_TYPE
-            // const children = jsonParser(value[0], level + 1);
-
+            // @TODO(sjv): Create a real random name generator
             output.type = "Array";
             const generateRandomKey = () => `GENKEY_${Math.round(Math.random() * 10000)}`;
             const genKey = generateRandomKey();
             output.children = parseType(genKey, { [genKey]: output.value[0]});
             output.value = null;
-            // output.children = parseType(key, { key: output.value[0] });
         }
     } else {
         output.type = "String";
