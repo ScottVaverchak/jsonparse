@@ -12,8 +12,8 @@ const parseType = (key, json) => {
         output.type = "Float";
     } else if(isObject(output.value)) {
         output.type = "Object";
-        output.value = null;
         output.children = jsonParser(output.value);
+        output.value = null;
     } else if(isArray(output.value)) {
         if(output.value.length > 0) {
             // @TODO(sjv): Need to generate a name for the value
@@ -22,6 +22,10 @@ const parseType = (key, json) => {
             // const children = jsonParser(value[0], level + 1);
 
             output.type = "Array";
+            const generateRandomKey = () => `GENKEY_${Math.round(Math.random() * 10000)}`;
+            const genKey = generateRandomKey();
+            output.children = parseType(genKey, { [genKey]: output.value[0]});
+            output.value = null;
             // output.children = parseType(key, { key: output.value[0] });
         }
     } else {
