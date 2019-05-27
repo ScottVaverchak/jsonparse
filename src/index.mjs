@@ -7,4 +7,4 @@ const json = JSON.parse(contents);
 console.log('JSON:');
 console.log(json);
 
-jsonParser(json);
+jsonParser(json, 0);

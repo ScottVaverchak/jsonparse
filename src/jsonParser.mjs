@@ -1,26 +1,25 @@
-const jsonParser = (json) => {
-    console.log('Beginning JSON parsing');
+const jsonParser = (json, level) => {
     const output = {};
-
+    const printLevel = (val) => console.log(val.padStart(val.length + level + 1, ' '));
     for(const prop in json) {
         const value = json[prop];
         const key = prop;
 
         if(isInteger(value)) {
-            console.log(`${key} is an Integer`);
+            printLevel(`${key} is an Integer`);
         } else if(isFloat(value)) {
-            console.log(`${key} is an Float`);
+            printLevel(`${key} is an Float`);
         } else if(isObject(value)) {
-            console.log(`${key} is an Object`);
-            jsonParser(value);
+            printLevel(`${key} is an Object`);
+            jsonParser(value, level + 1);
         } else if(isArray(value)) {
-            console.log(`${key} is an Array`);
+            printLevel(`${key} is an Array`);
             if(value.length <= 0) 
                 continue;
 
-            jsonParser(value[0]);
+            jsonParser(value[0], level + 1);
         } else {
-            console.log(`${key} is probably a String`);
+            printLevel(`${key} is probably a String`);
         }
     }
 
@@ -32,5 +31,6 @@ const isInteger = val => isNumber(val) && Math.round(val) == val;
 const isFloat = val => isNumber(val) && Math.round(val) != val; 
 const isObject = val => !!val && val.constructor === Object;
 const isArray = val => !!val && val.constructor === Array;
+
 
 export default jsonParser;
