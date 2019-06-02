@@ -27,7 +27,7 @@ const generateData = type => {
     } else if(type.type === 'Float') {
         return Math.random() * 10;
     } else if(type.type === 'String') {
-        return "THIS IS WHERE WE GENERATE STRINGS";
+        return Math.random().toString(36).substring(7);;
     } else if(type.type === 'DateTime') {
         const dt = new Date();
         dt.setMinutes(dt.getMinutes() + generateData({type: 'Integer'}));
