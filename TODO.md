@@ -14,6 +14,16 @@
     * Object (recursive)
     * Array (recursive)
 
+* Create type specific generators
+    * String
+        * First Name
+        * Last Name
+        * Full Name
+        * Address
+        * City 
+        * State
+        * Long / Lat
+
 * Create name generator for values inside an array
 
 ## Priotity - Code Refactoring

@@ -30,7 +30,3 @@ console.log(util.inspect(output, false, null, true));
 label("GENERATED JSON DATA");
 const generatedData = jsonGenerator(output);
 console.log(util.inspect(generatedData, false, null, true));
-
-// console.log("////\n////\n////\n////\nOUTPUT STARTS HERE");
-// const output2 = jsonParser(generatedData);
-// console.log(util.inspect(output2, false, null, true));
