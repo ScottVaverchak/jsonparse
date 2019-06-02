@@ -19,3 +19,4 @@
 ## Priotity - Code Refactoring
 
 * Move type checker so it uses an array of functions that return null or a function to convert the opject
+* The way we handle arrays is not great. It's a lot of corner cases for it and I don't see why we need that

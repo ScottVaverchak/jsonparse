@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node --experimental-modules src/index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node  --experimental-modules test/main.test.mjs"
   },
   "author": "",
   "license": "ISC",
