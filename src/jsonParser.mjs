@@ -18,7 +18,7 @@ const parseType = (key, json) => {
             output.type = "Array";
             const generateRandomKey = () => `GENKEY_${Math.round(Math.random() * 10000)}`;
             const genKey = generateRandomKey();
-            output.children = parseType(genKey, { [genKey]: output.value[0]});
+            output.children = [parseType(genKey, { [genKey]: output.value[0]})];
             output.value = null;
         }
     } else {
