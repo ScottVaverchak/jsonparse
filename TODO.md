@@ -2,6 +2,14 @@
 
 ## Priority - Code Creation
 
+* Create generators for the following types: 
+    * DateTime
+    * String
+    * Int
+    * Float
+    * Object (recursive)
+    * Array (recursive)
+
 * Create name generator for values inside an array
 
 ## Priotity - Code Refactoring

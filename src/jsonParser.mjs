@@ -1,5 +1,3 @@
-
-
 const parseType = (key, json) => {
     const output = {};
     
