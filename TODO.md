@@ -2,7 +2,11 @@
 
 ## Priority - Code Creation
 
-* Create generators for the following types: 
+* Add an ability to compare json -> type_data -> json1 -> type_data1
+    * We would compare the type_data and type_data1
+    * This should ignore the value of the object, we don't care about that
+
+* Create proper generators for the following types: 
     * DateTime
     * String
     * Int
