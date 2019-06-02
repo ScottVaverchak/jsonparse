@@ -20,3 +20,8 @@
 
 * Move type checker so it uses an array of functions that return null or a function to convert the opject
 * The way we handle arrays is not great. It's a lot of corner cases for it and I don't see why we need that
+* Refactor the testing framework
+    * Make a generic test(name, fn)
+        * Make a pass() and fail() method
+    * Count the total tests 
+    * Count the amount of time it takes to run
