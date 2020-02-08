@@ -1,15 +1,13 @@
 {
   "name": "jsonparse",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generate json from existing json",
   "main": "index.js",
   "scripts": {
-    "start": "node --experimental-modules src/index.mjs",
-    "test": "node  --experimental-modules test/main.test.mjs"
+    "start": "node src/index.mjs",
+    "test": "node test/main.test.mjs"
   },
-  "author": "",
+  "author": "Scott Vaverchak",
   "license": "ISC",
-  "devDependencies": {
-    "jest": "^24.8.0"
-  }
+  "devDependencies": {}
 }

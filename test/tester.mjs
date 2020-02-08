@@ -1,4 +1,3 @@
-
 const test = (name, fn) => {
     try {
         fn();

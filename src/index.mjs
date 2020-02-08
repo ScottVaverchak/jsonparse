@@ -1,5 +1,5 @@
 import jsonParser from './jsonParser.mjs';
-import jsonGenerator from './jsonGenerator';
+import jsonGenerator from './jsonGenerator.mjs';
 import fs from 'fs';
 import util from 'util';
 

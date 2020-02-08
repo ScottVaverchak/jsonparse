@@ -1,5 +1,5 @@
-import jsonParser from '../src/jsonParser';
-import jsonGenerator from '../src/jsonGenerator';
+import jsonParser from '../src/jsonParser.mjs';
+import jsonGenerator from '../src/jsonGenerator.mjs';
 import fs from 'fs';
 import tester from './tester.mjs';
 import assert from 'assert';
@@ -26,8 +26,8 @@ tester("Testing Equality in Type Data between Parses", () => {
                 brother = existing_type_data[0];
 
             assert(brother, `FAIL! Unable to find a matching record for ${new_type}`);
-            assert(new_type.type === brother.type);
-
+            assert(new_type.type === brother.type, `FAIL! Tyep mismatch: ${new_type.type} !=  ${brother.type}`);
+            
             if(new_type.children) {
                 checkEqualityTypeData(new_type.children, brother.children);
             }
